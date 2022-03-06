@@ -2,9 +2,9 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ '1.16.5-mccreator' ]
+    branches: [ '1.16.5-mccreator', 'main' ]
   pull_request:
-    branches: [ '1.16.5-mccreator' ]
+    branches: [ '1.16.5-mccreator', 'main' ]
   schedule:
     - cron: '26 14 * * 5'
 
