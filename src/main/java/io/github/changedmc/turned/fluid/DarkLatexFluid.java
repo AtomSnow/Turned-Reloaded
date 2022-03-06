@@ -23,7 +23,7 @@ import net.minecraftforge.fluids.FluidAttributes;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-// TODO: Make it swimable but not behave like water.
+// TODO: Make it swim-able but not behave like water.
 public abstract class DarkLatexFluid extends FlowingFluid {
 
     private static final List<Direction> spreadDirectionList = List.of(Direction.EAST, Direction.WEST, Direction.NORTH, Direction.SOUTH, Direction.DOWN);

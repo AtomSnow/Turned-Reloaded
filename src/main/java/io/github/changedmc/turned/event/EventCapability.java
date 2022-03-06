@@ -1,7 +1,7 @@
 package io.github.changedmc.turned.event;
 
 import io.github.changedmc.turned.Main;
-import io.github.changedmc.turned.capability.transfur.TransfurCapabilityProvider;
+import io.github.changedmc.turned.capability.transfur.TransfurCapability;
 import io.github.changedmc.turned.config.TurnedCommonConfig;
 import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.resources.ResourceLocation;
@@ -15,7 +15,7 @@ public class EventCapability {
     public static void onAttachCapabilitiesEvent(AttachCapabilitiesEvent<Entity> event) {
         if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD)
             Main.LOGGER.debug("Attaching Transfur Capability to an Entity");
-        TransfurCapabilityProvider transfurCapabilityProvider = new TransfurCapabilityProvider(event.getObject());
+        TransfurCapability.Provider transfurCapabilityProvider = new TransfurCapability.Provider(event.getObject());
         event.addCapability(new ResourceLocation(TurnedReference.MOD_ID, "transfur_capability"), transfurCapabilityProvider);
         event.addListener(transfurCapabilityProvider::invalidate);
     }
