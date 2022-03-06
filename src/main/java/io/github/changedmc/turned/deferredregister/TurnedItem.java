@@ -1,7 +1,7 @@
 package io.github.changedmc.turned.deferredregister;
 
 import io.github.changedmc.turned.item.*;
-import io.github.changedmc.turned.reference.Reference;
+import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.reference.TurnedCreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -11,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class TurnedItem {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TurnedReference.MOD_ID);
 
     public static final RegistryObject<Baton> BATON = ITEMS.register("baton", Baton::new);
     public static final RegistryObject<DarkLatexAxe> DARK_LATEX_AXE = ITEMS.register("dark_latex_axe", DarkLatexAxe::new);

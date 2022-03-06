@@ -1,6 +1,6 @@
 package io.github.changedmc.turned.world;
 
-import io.github.changedmc.turned.reference.Reference;
+import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -11,6 +11,6 @@ public class TurnedBiomes {
 
     private static ResourceKey<Biome> register(String name)
     {
-        return ResourceKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(Reference.MOD_ID, name));
+        return ResourceKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(TurnedReference.MOD_ID, name));
     }
 }

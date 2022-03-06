@@ -1,6 +1,6 @@
 package io.github.changedmc.turned.client.model.latex;
 
-import io.github.changedmc.turned.reference.Reference;
+import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.client.model.CustomHumanoidModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 
 public class DarkLatexModel<T extends LivingEntity> extends CustomHumanoidModel<T> {
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Reference.MOD_ID, "darklatexmodel"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(TurnedReference.MOD_ID, "darklatexmodel"), "main");
 
 	public DarkLatexModel(ModelPart root) {
 		super(RenderType::entityCutoutNoCull, root.getChild("head"), root.getChild("body"), root.getChild("leftArm"), root.getChild("rightArm"), root.getChild("leftLeg"), root.getChild("rightLeg"));

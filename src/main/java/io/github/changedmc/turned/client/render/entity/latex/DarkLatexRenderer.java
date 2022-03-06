@@ -1,7 +1,7 @@
 package io.github.changedmc.turned.client.render.entity.latex;
 
 import io.github.changedmc.turned.entity.latex.DarkLatex;
-import io.github.changedmc.turned.reference.Reference;
+import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.client.model.latex.DarkLatexModel;
 import io.github.changedmc.turned.client.render.entity.CustomHumanoidRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -18,6 +18,6 @@ public class DarkLatexRenderer extends CustomHumanoidRenderer<DarkLatex, DarkLat
     @Nonnull
     @Override
     public ResourceLocation getTextureLocation(@Nonnull DarkLatex darkLatex) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/entity/dark_latex.png");
+        return new ResourceLocation(TurnedReference.MOD_ID, "textures/entity/dark_latex.png");
     }
 }

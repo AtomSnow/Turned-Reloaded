@@ -11,9 +11,10 @@ public class TurnedSurfaceRulesData {
     protected static SurfaceRules.RuleSource makeRules()
     {
         SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
-        SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, HARMLESS_DARK_LATEX_BLOCK), DARK_LATEX_BLOCK);
+        SurfaceRules.RuleSource harmlessDarkLatexSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, HARMLESS_DARK_LATEX_BLOCK), DARK_LATEX_BLOCK);
         return SurfaceRules.sequence(
-                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface)
+                SurfaceRules.ifTrue(SurfaceRules.waterBlockCheck(0, 0), makeStateRule(TurnedBlock.DARK_LATEX_FLUID.get())),
+                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, harmlessDarkLatexSurface)
         );
     }
 

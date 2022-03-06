@@ -2,7 +2,7 @@ package io.github.changedmc.turned.client.gui.component;
 
 import io.github.changedmc.turned.capability.transfur.ITransfurCapability;
 import io.github.changedmc.turned.capability.transfur.TransfurCapability;
-import io.github.changedmc.turned.reference.Reference;
+import io.github.changedmc.turned.reference.TurnedReference;
 import com.mojang.blaze3d.platform.Window;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -15,7 +15,7 @@ import net.minecraft.world.level.GameType;
 
 public class LatexIndicator extends GuiComponent {
 
-    public final ResourceLocation LATEX_INDICATOR = new ResourceLocation(Reference.MOD_ID, "textures/gui/hud/latex_indicator.png");
+    public final ResourceLocation LATEX_INDICATOR = new ResourceLocation(TurnedReference.MOD_ID, "textures/gui/hud/latex_indicator.png");
 
     public final int texSizeX = 32;
     public final int texSizeY = 64;

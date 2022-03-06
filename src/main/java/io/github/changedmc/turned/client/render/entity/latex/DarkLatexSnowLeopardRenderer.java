@@ -1,7 +1,7 @@
 package io.github.changedmc.turned.client.render.entity.latex;
 
 import io.github.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
-import io.github.changedmc.turned.reference.Reference;
+import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.client.model.latex.DarkLatexSnowLeopardModel;
 import io.github.changedmc.turned.client.render.entity.CustomHumanoidRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -17,6 +17,6 @@ public class DarkLatexSnowLeopardRenderer extends CustomHumanoidRenderer<DarkLat
     @Nonnull
     @Override
     public ResourceLocation getTextureLocation(@Nonnull DarkLatexSnowLeopard darkLatexSnowLeopard) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/entity/dark_latex_snow_leopard.png");
+        return new ResourceLocation(TurnedReference.MOD_ID, "textures/entity/dark_latex_snow_leopard.png");
     }
 }
