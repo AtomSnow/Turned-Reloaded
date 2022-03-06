@@ -1,9 +1,11 @@
 package io.github.changedmc.turned.capability.transfur;
 
+import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.reference.networking.NetworkManager;
 import io.github.changedmc.turned.reference.networking.packet.server.SyncTransfurCapability;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.common.capabilities.*;
@@ -13,12 +15,15 @@ import net.minecraftforge.network.PacketDistributor;
 import javax.annotation.Nonnull;
 
 public class TransfurCapability {
+    public static final ResourceLocation KEY = new ResourceLocation(TurnedReference.MOD_ID, "transfur_capability");
+
     public static final Capability<ITransfurCapability> TRANSFUR_CAPABILITY = CapabilityManager.get(new CapabilityToken<>() {
     });
 
     public static void register(RegisterCapabilitiesEvent event) {
         event.register(ITransfurCapability.class);
     }
+
 
     public static class Default implements ITransfurCapability {
         private Entity entity;
@@ -79,14 +84,11 @@ public class TransfurCapability {
 
     public static class Provider implements ICapabilitySerializable<CompoundTag> {
         final TransfurCapability.Default defaultTransfurCapability = new TransfurCapability.Default();
-        private Entity entity;
-        final LazyOptional<ITransfurCapability> opt = LazyOptional.of(() -> {
-            defaultTransfurCapability.setEntity(this.entity);
-            return defaultTransfurCapability;
-        });
+        final LazyOptional<ITransfurCapability> opt = LazyOptional.of(() -> defaultTransfurCapability);
+        ;
 
         public Provider(Entity entity) {
-            this.entity = entity;
+            this.defaultTransfurCapability.setEntity(entity);
         }
 
         public void invalidate() {
@@ -96,16 +98,14 @@ public class TransfurCapability {
         @Nonnull
         @Override
         public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, Direction facing) {
-            return opt.cast();
+            return TRANSFUR_CAPABILITY.orEmpty(capability, opt);
         }
 
         @Override
         public void deserializeNBT(CompoundTag compoundTag) {
-            if (TransfurCapability.TRANSFUR_CAPABILITY != null) {
-                defaultTransfurCapability.setTransfurType(compoundTag.getInt("transfurType"));
-                defaultTransfurCapability.setLatexLevel(compoundTag.getInt("latexLevel"));
-                defaultTransfurCapability.setTransfured(compoundTag.getBoolean("isTransfured"));
-            }
+            defaultTransfurCapability.setTransfurType(compoundTag.getInt("transfurType"));
+            defaultTransfurCapability.setLatexLevel(compoundTag.getInt("latexLevel"));
+            defaultTransfurCapability.setTransfured(compoundTag.getBoolean("isTransfured"));
         }
 
         @Override
