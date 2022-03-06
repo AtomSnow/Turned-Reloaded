@@ -3,6 +3,8 @@ package io.github.changedmc.turned.capability.transfur;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 
+import javax.annotation.Nullable;
+
 public interface ITransfurCapability {
 
     int getTransfurType();
@@ -20,6 +22,4 @@ public interface ITransfurCapability {
     void setLatexLevel(int level);
 
     void syncCapability();
-
-    void syncTo(ServerPlayer player);
 }

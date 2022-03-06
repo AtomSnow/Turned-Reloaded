@@ -18,7 +18,7 @@ import io.github.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import io.github.changedmc.turned.entity.npc.Scientist;
 import io.github.changedmc.turned.gamerule.TurnedGamerules;
 import io.github.changedmc.turned.reference.TurnedReference;
-import io.github.changedmc.turned.reference.networking.NetworkManager;
+import io.github.changedmc.turned.networking.NetworkManager;
 import io.github.changedmc.turned.transfur.TransfurManager;
 import io.github.changedmc.turned.world.TurnedBiomeProvider;
 import io.github.changedmc.turned.world.TurnedBiomes;

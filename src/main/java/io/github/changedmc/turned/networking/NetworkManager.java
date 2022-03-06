@@ -1,7 +1,7 @@
-package io.github.changedmc.turned.reference.networking;
+package io.github.changedmc.turned.networking;
 
 import io.github.changedmc.turned.Main;
-import io.github.changedmc.turned.reference.networking.packet.server.SyncTransfurCapability;
+import io.github.changedmc.turned.networking.packet.server.SyncTransfurCapability;
 import io.github.changedmc.turned.config.TurnedCommonConfig;
 import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.network.FriendlyByteBuf;

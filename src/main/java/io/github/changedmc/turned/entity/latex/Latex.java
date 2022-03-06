@@ -75,6 +75,7 @@ public abstract class Latex extends PathfinderMob {
                     Utility.transfur(this, entity, null, transfurCapability);
                 } else {
                     transfurCapability.setLatexLevel(nextLevel);
+                    transfurCapability.syncCapability();
                 }
             }
         }

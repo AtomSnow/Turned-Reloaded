@@ -141,6 +141,7 @@ public class Utility {
             targetTransfurCapability.setTransfurType((source instanceof Latex) ? ((Latex) source).getTransfurType() : sourceTransfurCapability.getTransfurType());
             targetTransfurCapability.setTransfured(true);
             targetTransfurCapability.setLatexLevel(0);
+            targetTransfurCapability.syncCapability();
         } else if (target instanceof Mob) {
             EntityType<? extends Mob> entityType = getTransfurType(source, target, sourceTransfurCapability);
             if (entityType == null) return;
