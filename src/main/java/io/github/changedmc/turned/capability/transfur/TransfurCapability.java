@@ -1,12 +1,11 @@
 package io.github.changedmc.turned.capability.transfur;
 
-import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.networking.NetworkManager;
 import io.github.changedmc.turned.networking.packet.server.SyncTransfurCapability;
+import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.capabilities.*;
@@ -15,7 +14,6 @@ import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.network.PacketDistributor;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public class TransfurCapability {
     public static final ResourceLocation KEY = new ResourceLocation(TurnedReference.MOD_ID, "transfur_capability");

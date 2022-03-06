@@ -9,16 +9,20 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 public class EventManager {
     public static void registerEvents() {
-        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventLifecycle");
+        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD)
+            Main.LOGGER.debug("Registering EventLifecycle");
         FMLJavaModLoadingContext.get().getModEventBus().register(EventLifecycle.class);
-        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventCapability");
+        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD)
+            Main.LOGGER.debug("Registering EventCapability");
         MinecraftForge.EVENT_BUS.register(EventCapability.class);
         if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventEntity");
         MinecraftForge.EVENT_BUS.register(EventEntity.class);
-        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventRenderer");
+        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD)
+            Main.LOGGER.debug("Registering EventRenderer");
         MinecraftForge.EVENT_BUS.register(EventRenderer.class);
 
-        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD) Main.LOGGER.debug("Registering ENTITY_TYPES");
+        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD)
+            Main.LOGGER.debug("Registering ENTITY_TYPES");
         TurnedEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD) Main.LOGGER.debug("Registering ITEMS");
         TurnedItem.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

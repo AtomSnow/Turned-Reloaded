@@ -9,8 +9,7 @@ import net.minecraft.world.level.biome.Biome;
 public class TurnedBiomes {
     public static final ResourceKey<Biome> DARK_LATEX = register("dark_latex");
 
-    private static ResourceKey<Biome> register(String name)
-    {
+    private static ResourceKey<Biome> register(String name) {
         return ResourceKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(TurnedReference.MOD_ID, name));
     }
 }

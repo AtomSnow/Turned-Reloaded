@@ -4,7 +4,6 @@ import io.github.changedmc.turned.Main;
 import io.github.changedmc.turned.capability.transfur.TransfurCapability;
 import io.github.changedmc.turned.config.TurnedCommonConfig;
 import io.github.changedmc.turned.reference.TurnedReference;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

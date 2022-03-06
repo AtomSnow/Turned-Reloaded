@@ -1,8 +1,8 @@
 package io.github.changedmc.turned.deferredregister;
 
 import io.github.changedmc.turned.block.DarkLatexBlock;
-import io.github.changedmc.turned.block.HarmlessDarkLatexBlock;
 import io.github.changedmc.turned.block.DarkLatexFluid;
+import io.github.changedmc.turned.block.HarmlessDarkLatexBlock;
 import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;

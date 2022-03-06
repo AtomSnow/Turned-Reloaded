@@ -1,6 +1,5 @@
 package io.github.changedmc.turned.event;
 
-import io.github.changedmc.turned.Main;
 import io.github.changedmc.turned.capability.transfur.ITransfurCapability;
 import io.github.changedmc.turned.capability.transfur.TransfurCapability;
 import io.github.changedmc.turned.config.TurnedServerConfig;
@@ -11,7 +10,7 @@ import io.github.changedmc.turned.util.Utility;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;

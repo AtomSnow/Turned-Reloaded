@@ -1,7 +1,7 @@
 package io.github.changedmc.turned.client.model.latex;
 
-import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.client.model.CustomHumanoidModel;
+import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;

@@ -1,9 +1,9 @@
 package io.github.changedmc.turned.client.render.entity.latex;
 
-import io.github.changedmc.turned.entity.latex.DarkLatex;
-import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.client.model.latex.DarkLatexModel;
 import io.github.changedmc.turned.client.render.entity.CustomHumanoidRenderer;
+import io.github.changedmc.turned.entity.latex.DarkLatex;
+import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 
