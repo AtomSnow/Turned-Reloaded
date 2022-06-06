@@ -13,7 +13,6 @@ public class DarkLatexMask extends ArmorItem {
     public DarkLatexMask() {
         super(TurnedArmor.LATEX_ARMOR, EquipmentSlot.HEAD, new Item.Properties().tab(TurnedCreativeModeTab.MISCELLANEOUS).rarity(Rarity.COMMON).durability(100).defaultDurability(100));
     }
-	/*
 	@OnlyIn(Dist.CLIENT)
 	public void initializeClient(Consumer<IItemRenderProperties> consumer) {
 		consumer.accept(new IItemRenderProperties() {
@@ -25,6 +24,5 @@ public class DarkLatexMask extends ArmorItem {
 		}
 		);
 	}
-	*/
     //I'll do this later, maybe
 }

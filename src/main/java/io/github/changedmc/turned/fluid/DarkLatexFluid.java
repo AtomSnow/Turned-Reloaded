@@ -118,7 +118,7 @@ public abstract class DarkLatexFluid extends FlowingFluid {
         return FluidAttributes.builder(
                         new ResourceLocation(TurnedReference.MOD_ID, "blocks/dark_latex_fluid"),
                         new ResourceLocation(TurnedReference.MOD_ID, "blocks/flowing_dark_latex_fluid"))
-                .density(3000).viscosity(6000)
+                .density(950).viscosity(1600)
                 .build(TurnedFluid.DARK_LATEX.get());
     }
 

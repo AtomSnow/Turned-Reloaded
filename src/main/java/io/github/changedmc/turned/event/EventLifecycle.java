@@ -20,9 +20,6 @@ import io.github.changedmc.turned.gamerule.TurnedGamerules;
 import io.github.changedmc.turned.networking.NetworkManager;
 import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.transfur.TransfurManager;
-import io.github.changedmc.turned.world.TurnedBiomeProvider;
-import io.github.changedmc.turned.world.TurnedBiomes;
-import io.github.changedmc.turned.world.TurnedOverworldBiomes;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
@@ -47,10 +44,6 @@ public class EventLifecycle {
         if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD) Main.LOGGER.debug("Registering Gamerules");
         //noinspection ALL
         new TurnedGamerules();
-        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD)
-            Main.LOGGER.debug("Registering Biome Provider");
-        event.enqueueWork(() ->
-                BiomeProviders.register(new TurnedBiomeProvider(new ResourceLocation(TurnedReference.MOD_ID, "biome_provider"), 1)));
     }
 
     @SubscribeEvent
@@ -61,11 +54,6 @@ public class EventLifecycle {
         event.put(TurnedEntityType.SCIENTIST.get(), Scientist.createAttributes().build());
     }
 
-    @SubscribeEvent
-    public static void registerBiomes(RegistryEvent.Register<Biome> event) {
-        IForgeRegistry<Biome> registry = event.getRegistry();
-        registry.register(TurnedOverworldBiomes.darkLatex().setRegistryName(TurnedBiomes.DARK_LATEX.location()));
-    }
 
     @SubscribeEvent
     public static void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
