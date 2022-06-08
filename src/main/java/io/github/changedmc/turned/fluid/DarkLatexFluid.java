@@ -26,7 +26,6 @@ import net.minecraftforge.fluids.FluidAttributes;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-// TODO: Make it swim-able but not behave like water.
 public abstract class DarkLatexFluid extends FlowingFluid {
 
     private static final List<Direction> spreadDirectionList = List.of(Direction.EAST, Direction.WEST, Direction.NORTH, Direction.SOUTH, Direction.DOWN);
@@ -118,7 +117,7 @@ public abstract class DarkLatexFluid extends FlowingFluid {
         return FluidAttributes.builder(
                         new ResourceLocation(TurnedReference.MOD_ID, "blocks/dark_latex_fluid"),
                         new ResourceLocation(TurnedReference.MOD_ID, "blocks/flowing_dark_latex_fluid"))
-                .density(950).viscosity(1600)
+                .density(2000).viscosity(2000)
                 .build(TurnedFluid.DARK_LATEX.get());
     }
 
